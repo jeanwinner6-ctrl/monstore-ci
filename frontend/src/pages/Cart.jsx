@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 function Cart() {
   const cartItems = [
     {
@@ -19,12 +21,12 @@ function Cart() {
         {cartItems.length === 0 ? (
           <div className="bg-white rounded-lg shadow-md p-12 text-center">
             <p className="text-xl text-gray-600 mb-4">Votre panier est vide</p>
-            <a
-              href="/products"
+            <Link
+              to="/products"
               className="bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition inline-block"
             >
               Continuer vos achats
-            </a>
+            </Link>
           </div>
         ) : (
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
